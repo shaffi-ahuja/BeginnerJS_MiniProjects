@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Memory Game</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+
+    <style>
+        div {
+
+            height: 100px;
+            width: 100%;
+        }
+
+        .greenbg {
+            background-color: green;
+        }
+
+        .image {
+            background-size: 55%;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+
+        .mycimg1 {
+            background-image: url("Images/chicken.png");
+        }
+
+        .mycimg2 {
+            background-image: url("Images/fox.png");
+        }
+
+        .mycimg3 {
+            background-image: url("Images/frog.png");
+        }
+
+        .mycimg4 {
+            background-image: url("Images/owl.png");
+        }
+
+        .mycimg5 {
+            background-image: url("Images/penguin.png");
+        }
+
+        .container {
+            width: 40%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container my-5">
+        <div class="row my-1">
+            <div class="col-4 mycimg1 image" id="img1"></div>
+            <div class="col-4 mycimg4 image" id="img2"></div>
+            <div class="col-4 mycimg3 image" id="img3"></div>
+        </div>
+        <div class="row">
+            <div class="col-4 mycimg2 image" id="img4"></div>
+            <div class="col-4 mycimg1 image" id="img5"></div>
+            <div class="col-4 mycimg2 image" id="img6"></div>
+        </div>
+        <div class="row my-1">
+            <div class="col-4 mycimg4 image" id="img7"></div>
+            <div class="col-4 mycimg3 image" id="img8"></div>
+            <div class="col-4 mycimg5 image" id="img9"></div>
+        </div>
+        <div class="row mt-2">
+            <h5 class="m-0 align-self-center text-center">Score : </h5>
+            <h5 class="m-0 text-center">Failed Events : </h5>
+        </div>
+    </div>
+    <script>
+        var img1 = document.getElementById('img1');
+        var img2 = document.getElementById('img2');
+        var img3 = document.getElementById('img3');
+        var img4 = document.getElementById('img4');
+        var img5 = document.getElementById('img5');
+        var img6 = document.getElementById('img6');
+        var img7 = document.getElementById('img7');
+        var img8 = document.getElementById('img8');
+        var img9 = document.getElementById('img9');
+
+        img1.addEventListener('click', () => {
+            img1.classList.toggle('greenbg');
+            img1.classList.toggle('mycimg1');
+        });
+        img2.addEventListener('click', () => {
+            img2.classList.toggle('greenbg');
+            img2.classList.toggle('mycimg4');
+        });
+        img3.addEventListener('click', () => {
+            img3.classList.toggle('greenbg');
+            img3.classList.toggle('mycimg3');
+        });
+        img4.addEventListener('click', () => {
+            img4.classList.toggle('greenbg');
+            img4.classList.toggle('mycimg2');
+        });
+        img5.addEventListener('click', () => {
+            img5.classList.toggle('greenbg');
+            img5.classList.toggle('mycimg1');
+        });
+        img6.addEventListener('click', () => {
+            img6.classList.toggle('greenbg');
+            img6.classList.toggle('mycimg2');
+        });
+        img7.addEventListener('click', () => {
+            img7.classList.toggle('greenbg');
+            img7.classList.toggle('mycimg4');
+        });
+        img8.addEventListener('click', () => {
+            img8.classList.toggle('greenbg');
+            img8.classList.toggle('mycimg3');
+        });
+        img9.addEventListener('click', () => {
+            img9.classList.toggle('greenbg');
+            img9.classList.toggle('mycimg5');
+        });
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"
+        integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.min.js"
+        integrity="sha384-pQQkAEnwaBkjpqZ8RU1fF1AKtTcHJwFl3pblpTlHXybJjHpMYo79HY3hIi4NKxyj"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
