@@ -17,19 +17,8 @@
             <button class=" btn btn-success col-md-2 mx-2" id="counter" type="">Count</button>
         </div>
     </div>
-    <script>
-        var counter = document.getElementById('counter');
+    <script src="VowelCounter.js">
 
-        counter.addEventListener('click', () => {
-            var text = document.getElementById('enteredText').value;
-            var count = 0;
-            for (var i in text) {
-                if (text[i] == 'a' || text[i] == 'e' || text[i] == 'i' || text[i] == 'o' || text[i] == 'u' || text[i] == 'A' || text[i] == 'E' || text[i] == 'I' || text[i] == 'O' || text[i] == 'U') {
-                    count++;
-                }
-            }
-            alert(count);
-        });
     </script>
 
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"

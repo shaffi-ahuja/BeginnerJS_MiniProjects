@@ -29,32 +29,7 @@
             </div>
         </div>
     </div>
-    <script>
-        var addItem = document.getElementById('addItem');
-        var list = document.getElementById('list');
-        addItem.addEventListener('click', function () {
-            event.preventDefault();
-
-            var item = document.getElementById('item').value;
-            var newItem = document.createElement('div');
-            newItem.innerHTML = `
-                    <input class="form-check-input" type="checkbox" value="" id="${item}">
-                    <label class="form-check-label" id="${item}Label"for="${item}">${item}</label>`;
-            list.appendChild(newItem);
-            var checkItem = document.getElementById(`${item}`);
-            checkItem.addEventListener('click', () => {
-                document.getElementById(`${item}Label`).innerHTML = `${item}`.strike();
-            });
-            document.getElementById('item').value = "";
-        });
-        var clearList = document.getElementById('clearList');
-        clearList.addEventListener('click', () => {
-            event.preventDefault();
-            console.log('clear list');
-            list.innerHTML = "";
-        });
-
-    </script>
+    <script src="ToDoList.js"></script>
 
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"
         integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU"
